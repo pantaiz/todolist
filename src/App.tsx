@@ -15,17 +15,18 @@ function App() {
 
     function removeTask(id: string) {
         setTask(tasks.filter((v) => v.id != id))
-        console.log(tasks);
     }
 
     function filterTask(value: FilterValuesType) {
         setFilter(value)
     }
+    function addNewTask(item:string) {
+        setTask([...tasksForToDoList,{id: v1(), title: item, isDone: false}])
+    }
 
     let tasksForToDoList = tasks
 
     if (filter === 'active') {
-        console.log("+")
         tasksForToDoList = tasks.filter(t => !t.isDone)
     }
     if (filter === 'completed') {
@@ -36,6 +37,7 @@ function App() {
             <TodoList removeTask={removeTask}
                       task={tasksForToDoList}
                       filterTask={filterTask}
+                      addNewTask={addNewTask}
 
             />
 

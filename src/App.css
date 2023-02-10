@@ -1,8 +1,8 @@
 .App {
-  padding: 30px;
+  padding:200px;
   display: flex;
 }
 
 .App > div {
-  margin-right: 50px;
+  margin-right: 200px;
 }
