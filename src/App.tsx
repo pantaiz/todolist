@@ -19,7 +19,10 @@ function App() {
         {id: v1(), title: "JS", isDone: true},
         {id: v1(), title: "ReactJS", isDone: false}
     ])
-
+const deleteTask = (id:string) => {
+    filtredTask=filtredTask.filter(t=>t.id!==id)
+    setTask(filtredTask)
+}
     const [filter, setFilter] = useState<FilterType>('all')
 
     let filtredTask = [...tasks]
@@ -32,7 +35,7 @@ function App() {
     return (
         <>
 
-            <TodoList task={filtredTask} filterHandler={setFilter}/>
+            <TodoList task={filtredTask} filterHandler={setFilter} deleteTask={deleteTask}/>
         </>
 
     )

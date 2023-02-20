@@ -3,6 +3,8 @@ import {FilterType, TasksType} from "./App";
 export type TodoListPropsType = {
     task: TasksType
     filterHandler: (filterWord: FilterType) => void
+    deleteTask: (id: string) => void
+
 }
 
 export const TodoList = (props: TodoListPropsType) => {
@@ -21,7 +23,7 @@ export const TodoList = (props: TodoListPropsType) => {
                         return (
                             <li key={t.id}>
                                 <button onClick={() => {
-                                    console.log('delet')
+                                    props.deleteTask(t.id)
                                 }}>X
                                 </button>
                                 {t.title}
