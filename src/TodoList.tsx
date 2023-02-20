@@ -2,10 +2,14 @@ import {FilterType, TasksType} from "./App";
 
 export type TodoListPropsType = {
     task: TasksType
-    filterHandler:(filterWord:FilterType)=>void
+    filterHandler: (filterWord: FilterType) => void
 }
 
 export const TodoList = (props: TodoListPropsType) => {
+
+    const onClickFilterHadler = (filterWord: FilterType) => {
+        props.filterHandler(filterWord)
+    }
     return (
         <>
             <div>
@@ -13,10 +17,13 @@ export const TodoList = (props: TodoListPropsType) => {
                     <button>+</button>
                 </div>
                 <ul>
-                    {props.task.map(t=>{
-                        return(
-                            <li>
-                                <button onClick={()=>{console.log('delet')}}>X</button>
+                    {props.task.map(t => {
+                        return (
+                            <li key={t.id}>
+                                <button onClick={() => {
+                                    console.log('delet')
+                                }}>X
+                                </button>
                                 {t.title}
                                 <input type={"checkbox"} checked={t.isDone}/>
                             </li>
@@ -24,9 +31,9 @@ export const TodoList = (props: TodoListPropsType) => {
                     })}
                 </ul>
                 <div>
-                    <button onClick={()=>props.filterHandler('all')}>All</button>
-                    <button onClick={()=>props.filterHandler('completed')}>Completed</button>
-                    <button onClick={()=>props.filterHandler('active')}>Active</button>
+                    <button onClick={() => onClickFilterHadler('all')}>All</button>
+                    <button onClick={() => onClickFilterHadler('completed')}>Completed</button>
+                    <button onClick={() => onClickFilterHadler('active')}>Active</button>
                 </div>
             </div>
         </>
