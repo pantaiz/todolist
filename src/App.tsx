@@ -42,7 +42,7 @@ function App() {
     return (
         <>
 
-            <TodoList changeCheked={changeCheked} addTask={addTask} task={filtredTask} filterHandler={setFilter} deleteTask={deleteTask}/>
+            <TodoList filterValue={filter} changeCheked={changeCheked} addTask={addTask} task={filtredTask} filterHandler={setFilter} deleteTask={deleteTask}/>
         </>
 
     )

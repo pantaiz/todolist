@@ -8,7 +8,7 @@ export type TodoListPropsType = {
     deleteTask: (id: string) => void
     addTask:(title:string)=>void
     changeCheked:(idTask:string,newIsDone:boolean)=>void
-
+    filterValue:FilterType
 }
 
 export const TodoList = (props: TodoListPropsType) => {
@@ -54,7 +54,7 @@ export const TodoList = (props: TodoListPropsType) => {
                 <ul>
                     {props.task.map(t => {
                         return (
-                            <li key={t.id}>
+                            <li key={t.id} className={t.isDone?s.completed:''}>
                                 <button onClick={() => {
                                     props.deleteTask(t.id)
                                 }}>X
@@ -66,9 +66,9 @@ export const TodoList = (props: TodoListPropsType) => {
                     })}
                 </ul>
                 <div>
-                    <button onClick={() => onClickFilterHadler('all')}>All</button>
-                    <button onClick={() => onClickFilterHadler('completed')}>Completed</button>
-                    <button onClick={() => onClickFilterHadler('active')}>Active</button>
+                    <button className={props.filterValue==='all'?s.ActiveButton:""} onClick={() => onClickFilterHadler('all')}>All</button>
+                    <button className={props.filterValue==='completed'?s.ActiveButton:""} onClick={() => onClickFilterHadler('completed')}>Completed</button>
+                    <button className={props.filterValue==='active'?s.ActiveButton:""} onClick={() => onClickFilterHadler('active')}>Active</button>
                 </div>
             </div>
         </>
