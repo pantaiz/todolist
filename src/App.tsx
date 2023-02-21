@@ -23,7 +23,9 @@ function App() {
         filtredTask = filtredTask.filter(t => t.id !== id)
         setTask(filtredTask)
     }
-
+    const changeCheked = (idTask:string,newIsDone:boolean) => {
+        setTask(tasks.map(a=>a.id===idTask?{...a,isDone:newIsDone}:a))
+    }
     const addTask = (title:string) => {
     const newTask:TaskType={id: v1(), title: title, isDone: false}
         setTask([newTask,...tasks])
@@ -40,7 +42,7 @@ function App() {
     return (
         <>
 
-            <TodoList addTask={addTask} task={filtredTask} filterHandler={setFilter} deleteTask={deleteTask}/>
+            <TodoList changeCheked={changeCheked} addTask={addTask} task={filtredTask} filterHandler={setFilter} deleteTask={deleteTask}/>
         </>
 
     )

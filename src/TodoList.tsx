@@ -7,6 +7,7 @@ export type TodoListPropsType = {
     filterHandler: (filterWord: FilterType) => void
     deleteTask: (id: string) => void
     addTask:(title:string)=>void
+    changeCheked:(idTask:string,newIsDone:boolean)=>void
 
 }
 
@@ -35,6 +36,10 @@ export const TodoList = (props: TodoListPropsType) => {
             addNewTaskONcLICKHandler()
         }
     }
+    const changeChekedHandler = (e:ChangeEvent<HTMLInputElement>,id:string) => {
+        props.changeCheked(id,e.currentTarget.checked)
+        console.log(e.currentTarget.checked)
+    }
     return (
         <>
             <div>
@@ -55,7 +60,7 @@ export const TodoList = (props: TodoListPropsType) => {
                                 }}>X
                                 </button>
                                 {t.title}
-                                <input type={"checkbox"} checked={t.isDone}/>
+                                <input type={"checkbox"} onChange={(e)=>changeChekedHandler(e,t.id)} checked={t.isDone}/>
                             </li>
                         )
                     })}
