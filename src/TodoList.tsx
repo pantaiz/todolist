@@ -1,5 +1,6 @@
 import {FilterType, TasksType} from "./App";
-import {useState} from "react";
+import {ChangeEvent,KeyboardEvent, useState} from "react";
+import s from "./ToDolist.module.css"
 
 export type TodoListPropsType = {
     task: TasksType
@@ -11,16 +12,38 @@ export type TodoListPropsType = {
 
 export const TodoList = (props: TodoListPropsType) => {
     const addNewTaskONcLICKHandler = () => {
-      props.addTask(title)
+        if (title){
+            setError(false)
+            props.addTask(title)
+            setTitle('')
+        }else{
+            setError(true)
+        }
+
     }
-    const [title,setTitle]=useState('')
+    const [title,setTitle]=useState<string>('')
+    const [error,setError]=useState<boolean>(false)
     const onClickFilterHadler = (filterWord: FilterType) => {
         props.filterHandler(filterWord)
+    }
+    const onChangeInputHandler = (e:ChangeEvent<HTMLInputElement>) => {
+        setTitle(e.currentTarget.value)
+        setError(false)
+    }
+    const onKeyDownHandler = (e:KeyboardEvent<HTMLInputElement>) => {
+        if (e.key==='Enter'){
+            addNewTaskONcLICKHandler()
+        }
     }
     return (
         <>
             <div>
-                <div><input value={title} onChange={(e)=>setTitle(e.currentTarget.value)}/> {/*инпут для добавления новых тасок*/}
+                {error&&<div className={s.errorMessage}>Wrong input messege!</div>}
+                <div><input
+                    className={error?s.error:''}
+                    value={title}
+                    onKeyDown={onKeyDownHandler}
+                    onChange={onChangeInputHandler}/> {/*инпут для добавления новых тасок*/}
                     <button onClick={addNewTaskONcLICKHandler}>+</button>
                 </div>
                 <ul>
