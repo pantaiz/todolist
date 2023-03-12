@@ -1,6 +1,8 @@
 .App {
-  margin-left: 200px;
-  padding:200px;
+  margin-left: 100px;
+  padding:100px;
+
+  color: gold;
   display: flex;
 }
 

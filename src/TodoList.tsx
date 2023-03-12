@@ -3,11 +3,12 @@ import {ChangeEvent,KeyboardEvent, useState} from "react";
 import s from "./ToDolist.module.css"
 
 export type TodoListPropsType = {
+    IdTodolist:string,
     task: TasksType
-    filterHandler: (filterWord: FilterType) => void
-    deleteTask: (id: string) => void
-    addTask:(title:string)=>void
-    changeCheked:(idTask:string,newIsDone:boolean)=>void
+    filterHandler: (IdTodolist:string,filterWord: FilterType) => void
+    deleteTask: (IdTodolist:string,id: string) => void
+    addTask:(IdTodolist:string,title:string)=>void
+    changeCheked:(IdTodolist:string,idTask:string,newIsDone:boolean)=>void
     filterValue:FilterType
 }
 
@@ -15,7 +16,7 @@ export const TodoList = (props: TodoListPropsType) => {
     const addNewTaskONcLICKHandler = () => {
         if (title){
             setError(false)
-            props.addTask(title)
+            props.addTask(props.IdTodolist,title)
             setTitle('')
         }else{
             setError(true)
@@ -25,7 +26,7 @@ export const TodoList = (props: TodoListPropsType) => {
     const [title,setTitle]=useState<string>('')
     const [error,setError]=useState<boolean>(false)
     const onClickFilterHadler = (filterWord: FilterType) => {
-        props.filterHandler(filterWord)
+        props.filterHandler(props.IdTodolist,filterWord)
     }
     const onChangeInputHandler = (e:ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
@@ -37,7 +38,7 @@ export const TodoList = (props: TodoListPropsType) => {
         }
     }
     const changeChekedHandler = (e:ChangeEvent<HTMLInputElement>,id:string) => {
-        props.changeCheked(id,e.currentTarget.checked)
+        props.changeCheked(props.IdTodolist,id,e.currentTarget.checked)
         console.log(e.currentTarget.checked)
     }
     return (
@@ -56,7 +57,7 @@ export const TodoList = (props: TodoListPropsType) => {
                         return (
                             <li key={t.id} className={t.isDone?s.completed:''}>
                                 <button onClick={() => {
-                                    props.deleteTask(t.id)
+                                    props.deleteTask(props.IdTodolist,t.id)
                                 }}>X
                                 </button>
                                 {t.title}
