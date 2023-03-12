@@ -13,3 +13,7 @@
     color: #8380a0;
     opacity: 0.5;
 }
+.title{
+    display: grid;
+    font-size: 20px;
+}
