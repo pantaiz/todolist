@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/AddItemForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EdittableSpan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDolist.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDolist.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
       <recent name="Q:\Project\main\todolist\src\AddItemForm.tsx" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="Q:\Project\main\todolist\src\EdittableSpan.tsx" />
       <recent name="Q:\Project\main\todolist\src\AddItemForm.tsx" />
     </key>
   </component>
@@ -51,7 +52,8 @@
       <updated>1678468945975</updated>
       <workItem from="1678468947934" duration="1063000" />
       <workItem from="1678644027131" duration="330000" />
-      <workItem from="1678644372798" duration="9496000" />
+      <workItem from="1678644372798" duration="10219000" />
+      <workItem from="1678718709076" duration="9610000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1678648423878</created>
@@ -67,7 +69,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678655505582</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <created>1678659902579</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678659902579</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1">
+      <created>1678659909244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678659909244</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
