@@ -2,7 +2,9 @@ import {FilterType, TasksType} from "./App";
 import {ChangeEvent} from "react";
 import s from "./ToDolist.module.css"
 import {AddItemForm} from "./AddItemForm";
-import { EdittableSpan } from "./EdittableSpan";
+import {EdittableSpan} from "./EdittableSpan";
+import {Button, ButtonGroup, Checkbox, IconButton} from "@mui/material";
+import {Delete} from "@mui/icons-material";
 
 export type TodoListPropsType = {
     IdTodolist: string,
@@ -13,7 +15,7 @@ export type TodoListPropsType = {
     addTask: (IdTodolist: string, title: string) => void
     changeCheked: (IdTodolist: string, idTask: string, newIsDone: boolean) => void
     filterValue: FilterType,
-    deleteTodoList:(IdTodolist: string)=>void,
+    deleteTodoList: (IdTodolist: string) => void,
 }
 
 export const TodoList = (props: TodoListPropsType) => {
@@ -26,8 +28,8 @@ export const TodoList = (props: TodoListPropsType) => {
         props.changeCheked(props.IdTodolist, id, e.currentTarget.checked)
     }
 
-    const addTask = (title:string) => {
-      props.addTask(props.IdTodolist,title)
+    const addTask = (title: string) => {
+        props.addTask(props.IdTodolist, title)
     }
     const deleteTodolist = () => {
 
@@ -38,34 +40,42 @@ export const TodoList = (props: TodoListPropsType) => {
         <div>
             <div className={s.title}>
                 <EdittableSpan title={props.title}/>
-                <button onClick={()=>deleteTodolist()}>x</button>
+                <IconButton onClick={() => deleteTodolist()} aria-label="delete">
+                    <Delete/>
+                </IconButton>
             </div>
             <div>
                 <AddItemForm addItem={addTask}/>
-                <ul>
+
                     {props.task.map(t => {
                         return (
-                            <li key={t.id} className={t.isDone ? s.completed : ''}>
-                                <button onClick={() => {props.deleteTask(props.IdTodolist, t.id)}}>
-                                    X
-                                </button>
+                            <div key={t.id} className={t.isDone ? s.completed : ''}>
+                                <Checkbox onChange={(e) => changeChekedHandler(e, t.id)}
+                                          checked={t.isDone}/>
                                 <EdittableSpan title={t.title}/>
-                                <input type={"checkbox"} onChange={(e) => changeChekedHandler(e, t.id)}
-                                       checked={t.isDone}/>
-                            </li>
+
+                                <IconButton onClick={() => {
+                                    props.deleteTask(props.IdTodolist, t.id)
+                                }}
+                                            aria-label="delete">
+                                    <Delete/>
+                                </IconButton>
+                            </div>
                         )
                     })}
-                </ul>
+
                 <div>
-                    <button className={props.filterValue === 'all' ? s.ActiveButton : ""}
+                    <ButtonGroup variant="text" aria-label="outlined primary button group">
+                    <Button variant={props.filterValue === 'all' ? 'contained' : 'text'}
                             onClick={() => onClickFilterHadler('all')}>All
-                    </button>
-                    <button className={props.filterValue === 'completed' ? s.ActiveButton : ""}
+                    </Button>
+                    <Button variant={props.filterValue === 'completed' ? 'contained' : 'text'}
                             onClick={() => onClickFilterHadler('completed')}>Completed
-                    </button>
-                    <button className={props.filterValue === 'active' ? s.ActiveButton : ""}
+                    </Button>
+                    <Button variant={props.filterValue === 'active' ? 'contained' : 'text'}
                             onClick={() => onClickFilterHadler('active')}>Active
-                    </button>
+                    </Button>
+                    </ButtonGroup>
                 </div>
             </div>
         </div>

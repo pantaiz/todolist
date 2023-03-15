@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import React, {useState,ChangeEvent} from "react";
 
 export type EdittableSpanPropsType = {
@@ -15,12 +16,12 @@ export const EdittableSpan = (props: EdittableSpanPropsType) => {
         setChange(true)
     }
 
-    const onBlurHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const onBlurHandler = () => {
         setChange(false)
 
     }
 
     return change
-        ? <input onBlur={onBlurHandler} onChange={onChangeInputHandler} value={title}/>
+        ? <TextField  size="small" variant="standard" onBlur={onBlurHandler} onChange={onChangeInputHandler} value={title}/>
         : <span onDoubleClick={onDubleClickHandler} >{title}</span>
 }

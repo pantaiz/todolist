@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/EdittableSpan.tsx" afterDir="false" />
+    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddItemForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDolist.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDolist.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EdittableSpan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdittableSpan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +57,9 @@
       <workItem from="1678468947934" duration="1063000" />
       <workItem from="1678644027131" duration="330000" />
       <workItem from="1678644372798" duration="10219000" />
-      <workItem from="1678718709076" duration="9610000" />
+      <workItem from="1678718709076" duration="10300000" />
+      <workItem from="1678830434164" duration="2573000" />
+      <workItem from="1678864564315" duration="3624000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1678648423878</created>
@@ -83,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678659909244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6">
+      <created>1678743891604</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678743891604</updated>
+    </task>
+    <task id="LOCAL-00006" summary="5">
+      <created>1678830783583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678830783583</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="5" />
+    <option name="LAST_COMMIT_MESSAGE" value="5" />
   </component>
 </project>

@@ -1,3 +1,5 @@
+import { Add } from "@mui/icons-material";
+import { Button, IconButton, TextField } from "@mui/material";
 import {ChangeEvent, useState, KeyboardEvent} from "react";
 import s from "./ToDolist.module.css";
 
@@ -29,13 +31,19 @@ export const AddItemForm = (props: AddItemFormPropsType) => {
         setError(false)
     }
     return <>
-        {error && <div className={s.errorMessage}>Wrong input messege!</div>}
-        <div><input
+        <div><TextField
             className={error ? s.error : ''}
+            variant={'outlined'}
+            label={'Type value'}
+            error={!!error}
+            helperText={error?'Wrong input messege!':''}
+
             value={title}
             onKeyDown={onKeyDownHandler}
             onChange={onChangeInputHandler}/> {/*инпут для добавления новых тасок*/}
-            <button onClick={addNewTaskONcLICKHandler}>+</button>
+            <IconButton
+                    color={'primary'}
+                    onClick={addNewTaskONcLICKHandler}><Add/></IconButton>
         </div>
     </>
 }
