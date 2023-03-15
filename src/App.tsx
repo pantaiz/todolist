@@ -93,9 +93,12 @@ function App() {
             </AppBar>
             <Container fixed>
 
-                <Grid container style={{padding:'10px'}}>
+
+                <Grid item style={{padding:'10px'}}>
+                    <Typography variant="h6">Create new TodoList</Typography>
                     <AddItemForm addItem={addTodoList}/>
                 </Grid>
+
 
                 <Grid spacing={3} container>
                     {todolist.map(el => {
