@@ -1,13 +1,28 @@
 import { v1 } from "uuid";
-import {TodolistType} from "../App";
-
-type ActionType = {
-    type:  string
+import {FilterValuesType, TodolistType} from "../App";
+export type removeTodolistType={
+    type:"REMOVE-TODOLIST",
+    id:string
     [key: string]: any
-    id?:string //remove
-    title:string//add
-
 }
+export type addTodolistType={
+    type:"ADD-TODOLIST",
+    title:string
+    [key: string]: any
+}
+export type ChangeTodolistTitleType={
+    type:"CHANGE-TODOLIST-TITLE",
+    id:string,
+    newTitle:string
+    [key: string]: any
+}
+export type ChangeTodolistFilterType={
+    type:"CHANGE-TODOLIST-FILTER",
+    id:string
+    filter:FilterValuesType
+    [key: string]: any
+}
+export type ActionType = ChangeTodolistTitleType|addTodolistType|removeTodolistType|ChangeTodolistFilterType
 
 // меня вызовут и дадут мне стейт (почти всегда объект)
 // и инструкцию (action, тоже объект)
@@ -18,6 +33,10 @@ export const todolistsReducer = (state: Array<TodolistType>, action: ActionType)
             return state.filter(a=>a.id!=action.id)
         case 'ADD-TODOLIST':
             return [{id: v1(), title: action.title, filter: 'all'}, ...state]
+        case "CHANGE-TODOLIST-TITLE":
+            return state.map(tl => tl.id === action.id?{...tl,title:action.newTitle}:tl)
+        case "CHANGE-TODOLIST-FILTER":
+            return state.map(tl => tl.id === action.id?{...tl,filter:action.filter}:tl)
         default:
             throw new Error('I don\'t understand this type')
     }
