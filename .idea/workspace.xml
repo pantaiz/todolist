@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="test">
+    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="test.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/todolist-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/todolist-reducer.ts" afterDir="false" />
@@ -73,7 +73,8 @@
       <workItem from="1679603190210" duration="482000" />
       <workItem from="1680185716980" duration="2161000" />
       <workItem from="1680292950452" duration="1192000" />
-      <workItem from="1680338309611" duration="3488000" />
+      <workItem from="1680338309611" duration="4273000" />
+      <workItem from="1680378918469" duration="2878000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1678648423878</created>
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680293372945</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test.2">
+      <created>1680343909592</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680343909592</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +168,7 @@
     <MESSAGE value="5" />
     <MESSAGE value="material ui" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test.2" />
   </component>
 </project>
