@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="test.2">
+    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="вторник 4 готов!">
+      <change afterPath="$PROJECT_DIR$/src/state/task-reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/task-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/todolist-reducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/todolist-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +38,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/state" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="Q:\Project\main\todolist\src" />
       <recent name="Q:\Project\main\todolist\src\state" />
+      <recent name="Q:\Project\main\todolist\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Q:\Project\main\todolist\src\AddItemForm.tsx" />
@@ -74,7 +75,8 @@
       <workItem from="1680185716980" duration="2161000" />
       <workItem from="1680292950452" duration="1192000" />
       <workItem from="1680338309611" duration="4273000" />
-      <workItem from="1680378918469" duration="2878000" />
+      <workItem from="1680378918469" duration="3730000" />
+      <workItem from="1680529680765" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1678648423878</created>
@@ -146,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680343909592</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="вторник 4 готов!">
+      <created>1680381872595</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680381872595</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +178,7 @@
     <MESSAGE value="material ui" />
     <MESSAGE value="test" />
     <MESSAGE value="test.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test.2" />
+    <MESSAGE value="вторник 4 готов!" />
+    <option name="LAST_COMMIT_MESSAGE" value="вторник 4 готов!" />
   </component>
 </project>
