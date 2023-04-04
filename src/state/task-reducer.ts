@@ -11,6 +11,18 @@ export type addTaskACType={
     title:string
     todolistId:string
 }
+export type ChangeStatusTaskACType={
+    type:"CHANGE-TASK-STATUS"
+    todolistId:string
+    taskId:string
+    isDone:boolean
+}
+export type ChangeTaskTitleACType={
+    type:"CHANGE-TASK-TITLE"
+    todolistId:string
+    taskId:string
+    title:string
+}
 
 
 
@@ -25,7 +37,7 @@ const startState:TasksStateType={
     ]
 }
 
-export type ActionType = removeTaskACType|addTaskACType
+export type ActionType = removeTaskACType|addTaskACType|ChangeStatusTaskACType|ChangeTaskTitleACType
 
 // меня вызовут и дадут мне стейт (почти всегда объект)
 // и инструкцию (action, тоже объект)
@@ -40,6 +52,14 @@ export const tasksReducer = (state: TasksStateType, action: ActionType):TasksSta
             return {...state,
                 [action.todolistId]:[...state[action.todolistId],{id:v1(),title:action.title,isDone:false}]
             }
+            case "CHANGE-TASK-STATUS":
+            return {...state,
+                [action.todolistId]:state[action.todolistId].map(a=>a.id===action.taskId?{...a,isDone:action.isDone}:a)
+            }
+            case "CHANGE-TASK-TITLE":
+            return {...state,
+                [action.todolistId]:state[action.todolistId].map(a=>a.id===action.taskId?{...a,title:action.title}:a)
+            }
 
         default:
             throw new Error('I don\'t understand this type')
@@ -50,4 +70,10 @@ export const removeTaskAC = (todolistId: string,taskID:string): removeTaskACType
 }
 export const addTaskAC = (todolistId: string,title: string): addTaskACType => {
     return {type: "ADD-TASK",todolistId, title}
+}
+export const changeTaskStatusAC = (todolistId: string,taskId:string,newIsDone: boolean): ChangeStatusTaskACType => {
+    return {type: "CHANGE-TASK-STATUS",todolistId,taskId, isDone:newIsDone}
+}
+export const changeTaskTitleAC = (todolistId: string,taskId:string,title:string): ChangeTaskTitleACType => {
+    return {type: "CHANGE-TASK-TITLE",todolistId,taskId, title}
 }
