@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="вторник 4 готов!">
-      <change afterPath="$PROJECT_DIR$/src/state/task-reducer.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/task-reducer.ts" afterDir="false" />
+    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="среда 1 наполовину">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/task-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/task-reducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/task-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/task-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,8 @@
       <workItem from="1680292950452" duration="1192000" />
       <workItem from="1680338309611" duration="4273000" />
       <workItem from="1680378918469" duration="3730000" />
-      <workItem from="1680529680765" duration="1799000" />
+      <workItem from="1680529680765" duration="3027000" />
+      <workItem from="1680605147709" duration="5928000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1678648423878</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680381872595</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="среда 1 наполовину">
+      <created>1680545581551</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680545581551</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +186,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="test.2" />
     <MESSAGE value="вторник 4 готов!" />
-    <option name="LAST_COMMIT_MESSAGE" value="вторник 4 готов!" />
+    <MESSAGE value="среда 1 наполовину" />
+    <option name="LAST_COMMIT_MESSAGE" value="среда 1 наполовину" />
   </component>
 </project>
