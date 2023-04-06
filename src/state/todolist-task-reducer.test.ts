@@ -24,11 +24,9 @@ test('new array should be added when new todolist is added', () => {
 
 
     const keys = Object.keys(endTaskState)
-    const newKey = keys.find(k => k != 'todolistId1' && k != 'todolistId2')
-    if (!newKey) {
-        throw Error('new key should be added')
-    }
+    const idFromTasks=keys[0]
+    const idFromTodolists=endTodolistState[0].id
 
-    expect(keys.length).toBe(3)
-    expect(endState['todolistId2']).ToBe
+    expect(idFromTasks).toBe(action.todolistId)
+    expect(idFromTodolists).toBe(action.todolistId)
 })
