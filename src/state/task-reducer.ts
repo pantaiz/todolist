@@ -45,11 +45,23 @@ export type ActionType =
     | ChangeTaskTitleACType
     | addTodolistType
     | removeTodolistType
+export let todolistId1 = v1();
+export let todolistId2 = v1();
 
+const InitionalState:TasksStateType={
+    [todolistId1]: [
+        {id: v1(), title: "HTML&CSS", isDone: true},
+        {id: v1(), title: "JS", isDone: true}
+    ],
+    [todolistId2]: [
+        {id: v1(), title: "Milk", isDone: true},
+        {id: v1(), title: "React Book", isDone: true}
+    ]
+}
 // меня вызовут и дадут мне стейт (почти всегда объект)
 // и инструкцию (action, тоже объект)
 // согласно прописанному type в этом action (инструкции) я поменяю state
-export const tasksReducer = (state: TasksStateType, action: ActionType): TasksStateType => {
+export const tasksReducer = (state: TasksStateType=InitionalState, action: ActionType): TasksStateType => {
     switch (action.type) {
         case 'REMOVE-TASK':
             return {
@@ -87,7 +99,7 @@ export const tasksReducer = (state: TasksStateType, action: ActionType): TasksSt
             delete stateCopy[action.id]
             return stateCopy
         default:
-            throw new Error('I don\'t understand this type')
+            return state
     }
 }
 export const removeTaskAC = (todolistId: string, taskID: string): removeTaskACType => {
