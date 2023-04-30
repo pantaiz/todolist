@@ -1,10 +1,9 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, memo} from 'react';
 import {FilterValuesType} from './App';
 import {AddItemForm} from './AddItemForm';
 import {EditableSpan} from './EditableSpan';
-import IconButton from '@mui/material/IconButton/IconButton';
+import {Button, Checkbox, IconButton} from "@mui/material";
 import {Delete} from "@mui/icons-material";
-import {Button, Checkbox} from "@mui/material";
 
 
 export type TaskType = {
@@ -27,7 +26,7 @@ type PropsType = {
     changeTaskTitle: (taskId: string, newTitle: string, todolistId: string) => void
 }
 
-export function Todolist(props: PropsType) {
+export const Todolist=memo((props: PropsType) =>{
     const addTask = (title: string) => {
         props.addTask(title, props.id);
     }
@@ -78,7 +77,7 @@ export function Todolist(props: PropsType) {
                 })
             }
         </div>
-        <div>
+        <div style={{ paddingTop: "10px"}}>
             <Button variant={props.filter === 'all' ? 'outlined' : 'text'}
                     onClick={onAllClickHandler}
                     color={'inherit'}
@@ -95,5 +94,5 @@ export function Todolist(props: PropsType) {
         </div>
     </div>
 }
-
+)
 

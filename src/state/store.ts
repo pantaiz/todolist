@@ -1,11 +1,18 @@
-import {combineReducers, createStore } from "redux";
-import { tasksReducer } from "./task-reducer";
-import { todolistsReducer } from "./todolist-reducer";
+import {tasksReducer} from './tasks-reducer';
+import {todolistsReducer} from './todolists-reducer';
+import {combineReducers, createStore} from 'redux';
 
-const RootReducer=combineReducers({
-    todolist:todolistsReducer,
-    task:tasksReducer
+// объединяя reducer-ы с помощью combineReducers,
+// мы задаём структуру нашего единственного объекта-состояния
+const rootReducer = combineReducers({
+    tasks: tasksReducer,
+    todolists: todolistsReducer
 })
+// непосредственно создаём store
+export const store = createStore(rootReducer);
+// определить автоматически тип всего объекта состояния
+export type AppRootStateType = ReturnType<typeof rootReducer>
 
-export type AppRootStateType=ReturnType<typeof RootReducer>
-export const store=createStore(RootReducer)
+// а это, чтобы можно было в консоли браузера обращаться к store в любой момент
+// @ts-ignore
+window.store = store;

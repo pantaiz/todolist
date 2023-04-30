@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="среда 1 completed">
-      <change afterPath="$PROJECT_DIR$/src/AppWithReducers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppWithReduxs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/store.ts" afterDir="false" />
+    <list default="true" id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="среда 1/2 completed">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddItemForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppWithReducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppWithReducers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppWithReduxs.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditableSpan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditableSpan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todolist.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todolist.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/task-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/task-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/todolist-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/task-reducer.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/task-reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/todolist-reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/todolist-task-reducer.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/user-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,23 +32,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
-  </component>
-  <component name="ProjectId" id="2MpeRro7ksGTl7UAvTzD064zceH" />
+  <component name="ProjectId" id="2GJxDyI2CHmB2mn3m0Lw6jYPxZm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,204 +56,46 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="Q:\Project\main\todolist\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Q:\Project\main\todolist\src" />
-      <recent name="Q:\Project\main\todolist\src\state" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="Q:\Project\main\todolist\src\AddItemForm.tsx" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="Q:\Project\main\todolist\src\EdittableSpan.tsx" />
-      <recent name="Q:\Project\main\todolist\src\AddItemForm.tsx" />
-    </key>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="" />
-      <created>1678468945975</created>
+      <changelist id="0e6c5759-d15a-478c-9e75-bdcfb9d0e6f6" name="Changes" comment="среда 1/2 completed" />
+      <created>1666120372104</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1678468945975</updated>
-      <workItem from="1678468947934" duration="1063000" />
-      <workItem from="1678644027131" duration="330000" />
-      <workItem from="1678644372798" duration="10219000" />
-      <workItem from="1678718709076" duration="10300000" />
-      <workItem from="1678830434164" duration="2573000" />
-      <workItem from="1678864564315" duration="5980000" />
-      <workItem from="1679508945883" duration="1016000" />
-      <workItem from="1679603190210" duration="482000" />
-      <workItem from="1680185716980" duration="2161000" />
-      <workItem from="1680292950452" duration="1192000" />
-      <workItem from="1680338309611" duration="4273000" />
-      <workItem from="1680378918469" duration="3730000" />
-      <workItem from="1680529680765" duration="3027000" />
-      <workItem from="1680605147709" duration="12743000" />
-      <workItem from="1680678369106" duration="2005000" />
-      <workItem from="1680723940906" duration="602000" />
-      <workItem from="1680812131438" duration="2405000" />
-      <workItem from="1681212949060" duration="12813000" />
+      <updated>1666120372104</updated>
+      <workItem from="1666120374237" duration="1052000" />
+      <workItem from="1666284301281" duration="670000" />
+      <workItem from="1666285141167" duration="2712000" />
+      <workItem from="1682160760152" duration="596000" />
+      <workItem from="1682289284906" duration="494000" />
     </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1678648423878</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678648423878</updated>
-    </task>
-    <task id="LOCAL-00002" summary="1">
-      <created>1678655505582</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678655505582</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1">
-      <created>1678659902579</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1678659902579</updated>
-    </task>
-    <task id="LOCAL-00004" summary="1">
-      <created>1678659909244</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1678659909244</updated>
-    </task>
-    <task id="LOCAL-00005" summary="6">
-      <created>1678743891604</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1678743891604</updated>
-    </task>
-    <task id="LOCAL-00006" summary="5">
-      <created>1678830783583</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1678830783583</updated>
-    </task>
-    <task id="LOCAL-00007" summary="material ui">
-      <created>1678868522307</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1678868522307</updated>
-    </task>
-    <task id="LOCAL-00008" summary="material ui">
-      <created>1678871347039</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1678871347039</updated>
-    </task>
-    <task id="LOCAL-00009" summary="test">
-      <created>1680293372945</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1680293372945</updated>
-    </task>
-    <task id="LOCAL-00010" summary="test.2">
-      <created>1680343909592</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1680343909592</updated>
-    </task>
-    <task id="LOCAL-00011" summary="вторник 4 готов!">
-      <created>1680381872595</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1680381872595</updated>
-    </task>
-    <task id="LOCAL-00012" summary="среда 1 наполовину">
-      <created>1680545581551</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1680545581551</updated>
-    </task>
-    <task id="LOCAL-00013" summary="среда 1 наполовину">
-      <created>1680616483821</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1680616483821</updated>
-    </task>
-    <task id="LOCAL-00014" summary="среда 1 3/4">
-      <created>1680641568176</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1680641568176</updated>
-    </task>
-    <task id="LOCAL-00015" summary="среда 1 3/4">
-      <created>1680723944101</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1680723944101</updated>
-    </task>
-    <task id="LOCAL-00016" summary="среда 1 3/4">
-      <created>1680812865282</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1680812865282</updated>
-    </task>
-    <task id="LOCAL-00017" summary="среда 1 3/4">
-      <created>1680813562211</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1680813562211</updated>
-    </task>
-    <task id="LOCAL-00018" summary="среда 1 completed">
-      <created>1680814472861</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1680814472861</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
-    <MESSAGE value="5" />
-    <MESSAGE value="material ui" />
-    <MESSAGE value="test" />
-    <MESSAGE value="test.2" />
-    <MESSAGE value="вторник 4 готов!" />
-    <MESSAGE value="среда 1 наполовину" />
-    <MESSAGE value="среда 1 3/4" />
-    <MESSAGE value="среда 1 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="среда 1 completed" />
   </component>
 </project>
