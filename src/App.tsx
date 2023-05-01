@@ -126,7 +126,7 @@ function App() {
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu">
-                        <Menu />
+                        <Menu/>
                     </IconButton>
                     <Typography variant="h6">
                         News
@@ -144,7 +144,7 @@ function App() {
                             let allTodolistTasks = tasks[tl.id];
                             let tasksForTodolist = allTodolistTasks;
 
-                            if (tl.filter === "active") { 
+                            if (tl.filter === "active") {
                                 tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false);
                             }
                             if (tl.filter === "completed") {
