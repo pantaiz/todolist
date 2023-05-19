@@ -28,37 +28,37 @@ export const TodolistsLists = () => {
 
     useEffect(() => {
         dispatch(fetchTodolistsTC())
-    }, [])
+    }, [dispatch])
 
     const removeTask = useCallback(function (id: string, todolistId: string) {
         dispatch(removeTaskTC(id, todolistId));
-    }, []);
+    }, [dispatch]);
 
     const addTask = useCallback(function (title: string, todolistId: string) {
         dispatch(addTaskTC(title, todolistId));
-    }, []);
+    }, [dispatch]);
 
     const changeStatus = useCallback(function (id: string, status: TaskStatuses, todolistId: string) {
         dispatch(updateTaskTC(id, todolistId, {status}));
-    }, []);
+    }, [dispatch]);
 
     const changeTaskTitle = useCallback(function (id: string, newTitle: string, todolistId: string) {
         const action = updateTaskTC(id, todolistId, {title: newTitle});
         dispatch(action)
-    }, []);
+    }, [dispatch]);
 
     const changeFilter = useCallback(function (value: FilterValuesType, todolistId: string) {
         const action = changeTodolistFilterAC(todolistId, value);
         dispatch(action);
-    }, []);
+    }, [dispatch]);
 
     const removeTodolist = useCallback(function (id: string) {
         dispatch(deleteTodolistsTC(id));
-    }, []);
+    }, [dispatch]);
 
     const changeTodolistTitle = useCallback(function (id: string, title: string) {
         dispatch(updateTodolistsTitleTC(id, title));
-    }, []);
+    }, [dispatch]);
 
     const addTodolist = useCallback((title: string) => {
         dispatch(addTodolistsTC(title));
