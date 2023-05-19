@@ -6,31 +6,58 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import {Menu} from '@mui/icons-material';
 import {TodolistsLists} from "../features/Todolists/TodolistsLists";
-import {LinearProgress} from "@mui/material";
+import {CircularProgress, LinearProgress} from "@mui/material";
 import {ErrorSnackbar} from "../components/ErrorSnackbar/ErrorSnackbar";
-import {useAppSelector} from "./store";
+import {useAppDispatch, useAppSelector} from "./store";
+import {Navigate, Route, Routes} from 'react-router-dom';
+import {Login} from "../features/Login/Login";
+import {useCallback, useEffect} from "react";
+import {initializedAppTC} from "./app-reducer";
+import { logoutTC } from '../features/Login/auth-reducer';
 
 
 function App() {
+    const dispatch=useAppDispatch()
     const status = useAppSelector(state => state.app.status)
+    const initialized = useAppSelector(state => state.app.initialized)
+    const isLoggedIn = useAppSelector(state => state.auth.isLoggedIn)
+    useEffect(()=>{
+        dispatch(initializedAppTC())
+    },[])
+    const logoutHandler =useCallback( () => {
+        dispatch(logoutTC())
+
+    },[])
+    if (!initialized) {
+        return <div
+            style={{position: 'fixed', top: '30%', textAlign: 'center', width: '100%'}}>
+            <CircularProgress/>
+        </div>
+    }
+
     return (
         <div className="App">
             <ErrorSnackbar/>
             <AppBar position="static">
 
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
+                <Toolbar  style={{display:'flex',justifyContent:'space-between'}}>
+                   {/* <IconButton edge="start" color="inherit" aria-label="menu">
                         <Menu/>
-                    </IconButton>
+                    </IconButton>*/}
                     <Typography variant="h6">
-                        News
+                        TodoLists
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    {isLoggedIn&&< Button onClick={logoutHandler} variant={"contained"} color={"secondary"}>Log out</Button>}
                 </Toolbar>
-                {status === 'loading' && <LinearProgress  color={"secondary"}/>}
+                {status === 'loading' && <LinearProgress color={"secondary"}/>}
             </AppBar>
             <Container fixed>
-                <TodolistsLists/>
+                <Routes>
+                    <Route path={'/'} element={<TodolistsLists/>}/>
+                    <Route path={'/login'} element={<Login/>}/>
+                    <Route path={'/404'} element={<h1>404 NOT FOUND</h1>}/>
+                    <Route path={'*'} element={<Navigate to={'/404'}/>}/>
+                </Routes>
             </Container>
         </div>
     );
