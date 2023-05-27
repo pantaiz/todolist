@@ -14,6 +14,7 @@ import {Login} from "../features/Login/Login";
 import {useCallback, useEffect} from "react";
 import {initializedAppTC} from "./app-reducer";
 import { logoutTC } from '../features/Login/auth-reducer';
+import {Error404} from "../components/404/error404";
 
 
 function App() {
@@ -55,8 +56,9 @@ function App() {
                 <Routes>
                     <Route path={'/'} element={<TodolistsLists/>}/>
                     <Route path={'/login'} element={<Login/>}/>
-                    <Route path={'/404'} element={<h1>404 NOT FOUND</h1>}/>
-                    <Route path={'*'} element={<Navigate to={'/404'}/>}/>
+                    <Route path={'/404'} element={<Error404/>}/>
+                    <Route path={'/todolist'} element={<Navigate to={'/'}/>}/>
+                    <Route path={'*'} element={<Navigate to={'todolist/404'}/>}/>
                 </Routes>
             </Container>
         </div>

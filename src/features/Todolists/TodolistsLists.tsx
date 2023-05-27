@@ -16,7 +16,7 @@ import Grid from "@mui/material/Grid";
 import {AddItemForm} from "../../components/AddItemForm/AddItemForm";
 import Paper from "@mui/material/Paper";
 import {Todolist} from "./Todolist/Todolist";
-import { Navigate } from "react-router-dom";
+import {Navigate} from "react-router-dom";
 
 export type TasksStateType = {
     [key: string]: Array<TaskType>
@@ -66,7 +66,7 @@ export const TodolistsLists = () => {
         dispatch(addTodolistsTC(title));
     }, [dispatch]);
     if (!isLoggedIn) {
-        return  <Navigate to={'/login'}/>
+        return <Navigate to={'/login'}/>
     }
 
     return (
